@@ -310,28 +310,20 @@ for ticker in tickers:
                         break
 
 
-# In[5]:
-
 
 StockList
 
-
-# In[6]:
 
 
 IPOList
 
 
-# In[7]:
-
 
 len(StockList)
 
 
-# In[8]:
 
-
-with open('/home/debian/notebooks/Run_on_Fridays/sStock_List.csv', 'w') as f:
+with open('sStock_List.csv', 'w') as f:
      
     # using csv.writer method from CSV package
     write = csv.writer(f)
@@ -339,7 +331,7 @@ with open('/home/debian/notebooks/Run_on_Fridays/sStock_List.csv', 'w') as f:
     write.writerow(StockList)
     #write.writerows(rows)
     
-# with open('/home/debian/notebooks/Run_on_Fridays/sPower_Play_List.csv', 'w') as f:
+# with open('sPower_Play_List.csv', 'w') as f:
      
 #     # using csv.writer method from CSV package
 #     write = csv.writer(f)
@@ -347,27 +339,27 @@ with open('/home/debian/notebooks/Run_on_Fridays/sStock_List.csv', 'w') as f:
 #     write.writerow(PowerPlay)
 #     #write.writerows(rows)
 
-with open('/home/debian/notebooks/Run_on_Fridays/sIPO_List.csv', 'w', newline='') as file:
+with open('sIPO_List.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(['Symbol'])
     for item in IPOList:
         writer.writerow([item,]) 
 
-with open('/home/debian/notebooks/Run_on_Fridays/sIPO-Older_List.csv', 'w', newline='') as file:
+with open('sIPO-Older_List.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(['Symbol'])
     for item in IPOOlderList:
         writer.writerow([item,]) 
 
 PowerPlay.insert(0,['Symbol','Base Length','Base Depth', 'Top Third of Base'])
-with open('/home/debian/notebooks/Run_on_Fridays/sPower_Play_List.csv', 'w', newline='') as file:
+with open('sPower_Play_List.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerows(PowerPlay)
 #     # writer.writerow(['Symbol'])
 #     # for item in PowerPlay:
 #     #     writer.writerow([item,]) 
 
-with open('/home/debian/notebooks/Run_on_Fridays/sFinal_Stock_List_Stage2.csv', 'w', newline='') as file:
+with open('sFinal_Stock_List_Stage2.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(['Symbol'])
     for item in StockList:
