@@ -187,7 +187,7 @@ IPOOlderList = []
 
 # import tickers
 # df = pd.read_csv("/home/debian/notebooks/Run_on_Fridays/RS_HIGH.csv")
-df = pd.read_csv("/home/debian/notebooks/Run_on_Fridays/IBD-Data.csv")
+df = pd.read_csv("IBD-Data.csv")
 
 tickers = df['Symbol'].tolist()
 
