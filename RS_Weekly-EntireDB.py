@@ -141,12 +141,6 @@ for ticker in tickers:
         roc_calculation = (rocFourthQtr*0.4) + (rocFirstQtr*0.2) + (rocSecondQtr*0.2) + (rocThirdQtr*0.2) 
         roc_List.append([ticker, roc_calculation])
 
-        # ROC during a correction of an index
-        roc_Days_Back = -40 # 40 is about 8 weeks
-
-        roc_Correction_Rank = ((df['High'].iloc[-1] - df['High'].iloc[roc_Days_Back]) / df['High'].iloc[roc_Days_Back]) * 100
-
-        roc_During_Correction.append([ticker, roc_Correction_Rank])
 
         # This is RS Calculation. 
         rsThirdQtr = 0
