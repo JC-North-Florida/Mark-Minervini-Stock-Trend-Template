@@ -13,11 +13,14 @@ This is meant for College or even High School students who have an understanding
 Now the code might not be pretty, but it works. It was one of those situations where I just started coding and just wanted it to work
 
 Step 1.
+
 If you don't have the libraries I use on the code, you will have to install them (ie pip install pandas).
 
 
 Step 2. 
+
 If you don't have access to IBD Digital to filter out stocks that have an RS Value of 89+, download the entire stock list from Nasdaq.com (screener).
+
 https://www.nasdaq.com/market-activity/stocks/screener
 
 Rename the file nasdaq.csv and save it in the same directory as these python files.
@@ -33,6 +36,7 @@ Get all the stocks that have an RS_Rank of 89 or 90+ and save them to a new CSV 
 
 
 Step 3.
+
 Run Stocks_Stage_2.py
 python3 Stocks_Stage_2.py
 
@@ -44,6 +48,7 @@ I like to make sure the stock is in an actual base, so I continue to step 4.
 
 
 Step 4. 
+
 This code helps find stocks that are at least in a 5 week base. 
 
 Run Stock_Base_Setup.py
@@ -54,7 +59,9 @@ The output file will be Base_Stock_List.csv
 Now you have to manually check all these stocks and make sure they have good fundamentals. 
 
 Again this is not a perfect process, but a simple way of doing this when on a budget would be to go to the SEC Edgar web-site. 
+
 https://www.sec.gov/search-filings
+
 Input the ticker symbol and find the 10-Q's and 10-K's for each stock on the list. 
 Get the Revenue, Net Income, and Net Income Per Share on a quarterly and annual basis to calculate if the stock is growing (Operation or Operating Income and Revenue are very useful too). 
 When in doubt, you can compare the data in Yahoo Finance or Wall Street Journal. 
