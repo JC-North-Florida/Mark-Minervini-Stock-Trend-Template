@@ -106,8 +106,8 @@ time.sleep(3)
 
 for ticker in tickers:
     if "^" not in ticker:
-        print(ticker)
-        df = RunStockToGraph(ticker,"2y","1wk", "Weekly")
+        print(str(ticker))
+        df = RunStockToGraph(str(ticker),"2y","1wk", "Weekly")
         # time.sleep(1)
     else:
         continue
