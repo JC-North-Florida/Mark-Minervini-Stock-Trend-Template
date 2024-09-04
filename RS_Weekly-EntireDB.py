@@ -86,7 +86,7 @@ tickers = []
 # Get all Tickers from Nasdaq CSV
 
 # import tickers
-df = pd.read_csv("/home/debian/notebooks/Nasdaq/nasdaq.csv")
+df = pd.read_csv("nasdaq.csv")
 
 tickers = df['Symbol'].str.strip().tolist()
 
@@ -210,19 +210,19 @@ rs_List2 = df.values.tolist()
 
 
           
-with open('/home/debian/notebooks/Run_on_Fridays/fWeeklyROC_List.csv', 'w', newline='') as file:
+with open('WeeklyROC_List.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     # writer.writerow()
     # writer.writerow(['Symbol','ROC_Value'])
     writer.writerows(roc_List)
 
-with open('/home/debian/notebooks/Run_on_Fridays/fWeeklyRS_ListWeighted.csv', 'w', newline='') as file:
+with open('WeeklyRS_ListWeighted.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     # writer.writerow()
     # writer.writerow(['Symbol','ROC_Value'])
     writer.writerows(rs_List)
 
-with open('/home/debian/notebooks/Run_on_Fridays/fRSWeekly_List_RyanStraight.csv', 'w', newline='') as file:
+with open('RSWeekly_List_RyanStraight.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     # writer.writerow()
     # writer.writerow(['Symbol','ROC_Value'])
