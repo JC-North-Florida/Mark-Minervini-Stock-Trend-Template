@@ -105,9 +105,12 @@ dfSPY = RunStockToGraph("SPY","2y","1wk", "Weekly")
 time.sleep(3)
 
 for ticker in tickers:
-    print(ticker)
-    df = RunStockToGraph(ticker,"2y","1wk", "Weekly")
-    # time.sleep(1)
+    if "^" not in ticker:
+        print(ticker)
+        df = RunStockToGraph(ticker,"2y","1wk", "Weekly")
+        # time.sleep(1)
+    else:
+        continue
     
     # Test for ROC value.
     # This ROC calculation is not testing for Stage 2.
