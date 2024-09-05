@@ -134,13 +134,13 @@ for ticker in tickers:
 
         # Run RS O'neil Style from Formula found on YouTube.
 
-        rocFourthQtr = ((df['High'].iloc[-1] - df['High'].iloc[-13]) / df['High'].iloc[-13]) * 100
+        rocFourthQtr = ((df['Close'].iloc[-1] - df['Close'].iloc[-13]) / df['Close'].iloc[-13]) * 100
 
-        rocFirstQtr = ((df['High'].iloc[-1] - df['High'].iloc[-52]) / df['High'].iloc[-52]) * 100
+        rocFirstQtr = ((df['Close'].iloc[-1] - df['Close'].iloc[-52]) / df['Close'].iloc[-52]) * 100
 
-        rocSecondQtr = ((df['High'].iloc[-1] - df['High'].iloc[-39]) / df['High'].iloc[-39]) * 100
+        rocSecondQtr = ((df['Close'].iloc[-1] - df['Close'].iloc[-39]) / df['Close'].iloc[-39]) * 100
 
-        rocThirdQtr = ((df['High'].iloc[-1] - df['High'].iloc[-26]) / df['High'].iloc[-26]) * 100
+        rocThirdQtr = ((df['Close'].iloc[-1] - df['Close'].iloc[-26]) / df['Close'].iloc[-26]) * 100
 
         roc_calculation = 0
         roc_calculation = (rocFourthQtr*0.4) + (rocFirstQtr*0.2) + (rocSecondQtr*0.2) + (rocThirdQtr*0.2) 
@@ -155,10 +155,10 @@ for ticker in tickers:
 
 
         # Formula from Youtube Video for RS value More Weighted Quarters.
-        rsFourthQtr = (((df['High'].iloc[-1]/dfSPY['High'].iloc[-1]) - (df['High'].iloc[-13]/dfSPY['High'].iloc[-13])) / (df['High'].iloc[-13]/dfSPY['High'].iloc[-13])) * 100
-        rsFirstQtr = (((df['High'].iloc[-1]/dfSPY['High'].iloc[-1]) - (df['High'].iloc[-52]/dfSPY['High'].iloc[-52])) / (df['High'].iloc[-52]/dfSPY['High'].iloc[-52])) * 100
-        rsSecondQtr = (((df['High'].iloc[-1]/dfSPY['High'].iloc[-1]) - (df['High'].iloc[-39]/dfSPY['High'].iloc[-39])) / (df['High'].iloc[-39]/dfSPY['High'].iloc[-39])) * 100
-        rsThirdQtr = (((df['High'].iloc[-1]/dfSPY['High'].iloc[-1]) - (df['High'].iloc[-26]/dfSPY['High'].iloc[-26])) / (df['High'].iloc[-26]/dfSPY['High'].iloc[-26])) * 100
+        rsFourthQtr = (((df['Close'].iloc[-1]/dfSPY['Close'].iloc[-1]) - (df['Close'].iloc[-13]/dfSPY['Close'].iloc[-13])) / (df['Close'].iloc[-13]/dfSPY['Close'].iloc[-13])) * 100
+        rsFirstQtr = (((df['Close'].iloc[-1]/dfSPY['Close'].iloc[-1]) - (df['Close'].iloc[-52]/dfSPY['Close'].iloc[-52])) / (df['Close'].iloc[-52]/dfSPY['Close'].iloc[-52])) * 100
+        rsSecondQtr = (((df['Close'].iloc[-1]/dfSPY['Close'].iloc[-1]) - (df['Close'].iloc[-39]/dfSPY['Close'].iloc[-39])) / (df['Close'].iloc[-39]/dfSPY['Close'].iloc[-39])) * 100
+        rsThirdQtr = (((df['Close'].iloc[-1]/dfSPY['Close'].iloc[-1]) - (df['Close'].iloc[-26]/dfSPY['Close'].iloc[-26])) / (df['Close'].iloc[-26]/dfSPY['Close'].iloc[-26])) * 100
 
         rs_calculation = 0
         rs_calculation = (rsFourthQtr*0.4) + (rsFirstQtr*0.2) + (rsSecondQtr*0.2) + (rsThirdQtr*0.2) 
@@ -172,10 +172,10 @@ for ticker in tickers:
         rsFirstQtr = 0
 
         # Like Ryan said in YouTube
-        rsFourthQtr = (((df['High'].iloc[-1]/dfSPY['High'].iloc[-1]) - (df['High'].iloc[-13]/dfSPY['High'].iloc[-13])) / (df['High'].iloc[-13]/dfSPY['High'].iloc[-13])) * 100
-        rsThirdQtr = (((df['High'].iloc[-14]/dfSPY['High'].iloc[-14]) - (df['High'].iloc[-26]/dfSPY['High'].iloc[-26])) / (df['High'].iloc[-26]/dfSPY['High'].iloc[-26])) * 100
-        rsSecondQtr = (((df['High'].iloc[-27]/dfSPY['High'].iloc[-27]) - (df['High'].iloc[-39]/dfSPY['High'].iloc[-39])) / (df['High'].iloc[-39]/dfSPY['High'].iloc[-39])) * 100
-        rsFirstQtr = (((df['High'].iloc[-40]/dfSPY['High'].iloc[-40]) - (df['High'].iloc[-52]/dfSPY['High'].iloc[-52])) / (df['High'].iloc[-52]/dfSPY['High'].iloc[-52])) * 100
+        rsFourthQtr = (((df['Close'].iloc[-1]/dfSPY['Close'].iloc[-1]) - (df['Close'].iloc[-13]/dfSPY['Close'].iloc[-13])) / (df['Close'].iloc[-13]/dfSPY['Close'].iloc[-13])) * 100
+        rsThirdQtr = (((df['Close'].iloc[-14]/dfSPY['Close'].iloc[-14]) - (df['Close'].iloc[-26]/dfSPY['Close'].iloc[-26])) / (df['Close'].iloc[-26]/dfSPY['Close'].iloc[-26])) * 100
+        rsSecondQtr = (((df['Close'].iloc[-27]/dfSPY['Close'].iloc[-27]) - (df['Close'].iloc[-39]/dfSPY['Close'].iloc[-39])) / (df['Close'].iloc[-39]/dfSPY['Close'].iloc[-39])) * 100
+        rsFirstQtr = (((df['Close'].iloc[-40]/dfSPY['Close'].iloc[-40]) - (df['Close'].iloc[-52]/dfSPY['Close'].iloc[-52])) / (df['Close'].iloc[-52]/dfSPY['Close'].iloc[-52])) * 100
 
         rs_calculation = 0
         # rs_calculation = (rsFourthQtr*0.4) + (rsFirstQtr*0.1) + (rsSecondQtr*0.2) + (rsThirdQtr*0.2) 
