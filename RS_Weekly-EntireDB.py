@@ -207,13 +207,13 @@ rs_List2.insert(0,['Symbol','RS_Value','Position','RS_Rank'])
 
 
           
-with open('WeeklyROC_List.csv', 'w', newline='') as file:
+with open('ROCWeekly_List.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     # writer.writerow()
     # writer.writerow(['Symbol','ROC_Value'])
     writer.writerows(roc_List)
 
-with open('WeeklyRS_ListWeighted.csv', 'w', newline='') as file:
+with open('RSWeekly_ListWeighted.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     # writer.writerow()
     # writer.writerow(['Symbol','ROC_Value'])
