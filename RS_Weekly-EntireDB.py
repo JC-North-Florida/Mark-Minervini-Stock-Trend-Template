@@ -187,6 +187,7 @@ roc_List = sorted(roc_List,key=lambda l:l[1], reverse=True)
 df = pd.DataFrame(roc_List, columns=['Symbol', 'RS_Value'])
 df['Position'] = len(df) - df.index.values
 df['RS_Rank'] = (df['Position']*99/len(df)).round()
+print(df)
 roc_List = df.values.tolist()
 roc_List.insert(0,['Symbol','RS_Value','Position','RS_Rank'])
 
@@ -194,13 +195,15 @@ rs_List = sorted(rs_List,key=lambda l:l[1], reverse=True)
 df = pd.DataFrame(rs_List, columns=['Symbol', 'RS_Value'])
 df['Position'] = len(df) - df.index.values
 df['RS_Rank'] = (df['Position']*99/len(df)).round()
-rs_list = df.values.tolist()
+print(df)
+rs_List = df.values.tolist()
 rs_List.insert(0,['Symbol','RS_Value','Position','RS_Rank'])
 
 rs_List2 = sorted(rs_List2,key=lambda l:l[1], reverse=True)
 df = pd.DataFrame(rs_List2, columns=['Symbol', 'RS_Value'])
 df['Position'] = len(df) - df.index.values
 df['RS_Rank'] = (df['Position']*99/len(df)).round()
+print(df)
 rs_List2 = df.values.tolist()
 rs_List2.insert(0,['Symbol','RS_Value','Position','RS_Rank'])
 
