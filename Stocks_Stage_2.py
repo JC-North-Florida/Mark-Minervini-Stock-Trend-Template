@@ -189,15 +189,15 @@ IPOOlderList = []
 # df = pd.read_csv("/home/debian/notebooks/Run_on_Fridays/RS_HIGH.csv")
 df = pd.read_csv("IBD-Data.csv")
 
-tickers = df['Symbol'].tolist()
+tickers = df['Symbol'].str.strip().tolist()
 
 time.sleep(4)
 
 
 
 for ticker in tickers:
-    print(ticker)
-    df = RunStockToGraph(ticker,"2y","1d", "Daily")
+    print(str(ticker))
+    df = RunStockToGraph(str(ticker),"2y","1d", "Daily")
     time.sleep(1)
     
     # Calculate Stage 2 also IPO
