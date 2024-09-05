@@ -105,7 +105,7 @@ dfSPY = RunStockToGraph("SPY","2y","1wk", "Weekly")
 time.sleep(3)
 
 for ticker in tickers:
-    if "^" not in ticker:
+    if "^" not in str(ticker):
         print(str(ticker))
         df = RunStockToGraph(str(ticker),"2y","1wk", "Weekly")
         # time.sleep(1)
