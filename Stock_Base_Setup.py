@@ -133,7 +133,7 @@ BaseSymbolList = []
 
 df = pd.read_csv("sFinal_Stock_List_Stage2.csv")
 
-tickers = df['Symbol'].tolist()
+tickers = df['Symbol'].str.strip().tolist()
 
 # Add Symbols for Cryptocurrency
 tickers.append('ETHE')
@@ -145,7 +145,7 @@ tickers.append('GBTC')
 
 time.sleep(2)
 
-print(tickers)
+print(str(tickers))
 
 time.sleep(2)
 
@@ -158,8 +158,8 @@ time.sleep(2)
 
 for ticker in tickers:
     try:
-        print(ticker)
-        df = RunStockToGraph(ticker,"2y","1wk", "Weekly") # Used 1 year, because I still need to calculate the 50 SMA.
+        print(str(ticker))
+        df = RunStockToGraph(str(ticker),"2y","1wk", "Weekly") # Used 1 year, because I still need to calculate the 50 SMA.
         # time.sleep(2)
         
         print(df.tail(10))
