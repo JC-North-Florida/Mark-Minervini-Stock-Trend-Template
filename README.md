@@ -23,7 +23,7 @@ If you don't have access to IBD Digital to filter out stocks that have an RS Val
 
 https://www.nasdaq.com/market-activity/stocks/screener
 
-Rename the file nasdaq.csv and save it in the same directory as these python files.
+Rename the file nasdaq.csv and save it in the same directory as these python files. For better results also add/combine the ETF list that appears on the same website. 
 
 Run RS_Weekly-EntireDB.py
 python3 RS_Weekly-EntireDB.py
