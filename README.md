@@ -58,7 +58,7 @@ The output file will be Base_Stock_List.csv
 
 Now you have to manually check all these stocks and make sure they have good fundamentals. 
 
-Again this is not a perfect process, but a simple way of doing this when on a budget would be to go to the SEC Edgar web-site. 
+Again this is not a perfect process, but a simple way of doing this when on a budget would be to go to the SEC Edgar web-site. If you want the Earnings that IBD uses, make sure to use the NON-GAAP data. The NON-GAAP data is easier to find on the Press Release.
 
 https://www.sec.gov/search-filings
 
